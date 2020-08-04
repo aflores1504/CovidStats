@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from './Slider';
+import Sidebar from './SideBar';
 import GlobalStatistics from './GlobalStatistics';
 
 class Home extends Component {
@@ -15,6 +16,8 @@ class Home extends Component {
                     <div id="content">
                         <GlobalStatistics />                        
                     </div>
+
+                    <Sidebar />
 
                 </div>
             </div>

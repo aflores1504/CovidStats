@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 // Importar componentes 
 import Header from './components/Header';
-
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Search from './components/Search';
 
 class Router extends Component {
 
@@ -21,6 +21,18 @@ class Router extends Component {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/home" component={Home} />
+                    
+                    <Route exact path="/country/:search" component={Search} />
+                    <Route exact path="/redirect/:search" render={
+                        (props) => {
+                            let search = props.match.params.search;
+                            return (
+                                <Redirect to={'/country/' + search} />
+                            );
+                        }
+                    } />
+
+                    
 
                 </Switch>
 
