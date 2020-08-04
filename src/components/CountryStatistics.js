@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Global from '../Global';
+import Error from './Error';
 import {GridComponent,
         ColumnDirective,
         ColumnsDirective,
@@ -83,7 +84,8 @@ class CountryStatistics extends Component {
             return (
                 <div id="statistics">
                     
-                    <h2 className="subheader">No hay Estadísticas para mostrar</h2>                 
+                    <Error />
+                   {/*} <h2 className="subheader">No hay Estadísticas para mostrar</h2>  */}                  
                 </div>
             );
         } else {
@@ -91,6 +93,7 @@ class CountryStatistics extends Component {
                 <div id="statistics">
                     <h2 className="subheader">Cargando...</h2>
                     <p>Espere mientras carga el contenido</p>
+                    
                 </div>
             );
 

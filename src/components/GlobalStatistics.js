@@ -62,7 +62,7 @@ class GlobalStatistics extends Component {
                         allowGrouping={true}
                         allowSorting={true}
                         allowPaging={true}
-                        pageSettings={{ pageSize: 10, pageCount: 3 }}
+                        pageSettings={{ pageSize: 8, pageCount: 3 }}
                         groupSettings={{
                             columns: ['continent'],
                             showDropArea: false
